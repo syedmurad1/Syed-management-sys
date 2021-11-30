@@ -20,9 +20,9 @@ def Ok3():
     root.destroy()
     call(["python", "images.py"])  # Change directory if needed
 
-def Ok4():
+def Ok4():                          
     root.destroy()
-    call([root, root.quit])  
+    call([root, root.quit])     # For Exit
  
 Label(root, text="Welcome", font=("Arial", 15, "bold"), bg="#00376b", fg="#FFFCF9").place(x=30, y=10)
 Button(root, text="Add", command=Ok, height= 3, width= 12).place(x=30,y=50)

@@ -16,7 +16,7 @@ Label(wellcomeroot, text="Syed Murad's Employee Registation", font=("Arial", 15,
 
 
 try:
-    #to show API data
+    #to get API data
     api_requeat = requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=20002&distance=25&API_KEY=CFD0BB59-E61A-437F-91FF-8F31BA883474")
 # loading data from API
     api = json.loads(api_requeat.content)   
