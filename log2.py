@@ -2,18 +2,12 @@ import mysql.connector
 from tkinter import *
 from tkinter import messagebox
 from subprocess import call
-import pymysql.cursors
-
-#from mysql.connector import Error
-
  
 def Ok():
-    mysqldb = mysql.connector.connect(host="localhost", user="root", password="", database="newmg")
+    mysqldb = mysql.connector.connect(host="localhost", user="root", password="", database="management")
     mycursor = mysqldb.cursor()
     uname = e1.get()
     password = e2.get()
-    
-    
  
     sql = "select * from user where uname = %s and password = %s"
     mycursor.execute(sql, [(uname), (password)])
@@ -21,7 +15,7 @@ def Ok():
  
     if results:
         root.destroy()
-        call(["python", "welcome.py"]) # Change directory if needed
+        call(["python", "C:/Users/ITC-LAB-T/Desktop/AP/syed-management-sys-with-log-in/welcome.py"])
         return True
     else :
         messagebox.showinfo("","Incorrent Username and Password")

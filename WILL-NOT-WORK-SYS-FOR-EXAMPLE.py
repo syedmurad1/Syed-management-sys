@@ -185,5 +185,4 @@ def delete():
 
 
 
-
 root.mainloop()
